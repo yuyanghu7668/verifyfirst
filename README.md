@@ -5,7 +5,7 @@
 VerifyFirst is a research prototype: a simulated university inbox that tests whether an AI warning that names one checkable detail leads students to verify account-suspension emails independently, compared with a generic warning. It builds on my Assignment 1 literature review.
 
 - **Report:** see the submitted project report (Assignment 2).
-- **Submitted version:** release `v1.1`, tagged in this repository (the version the report links to).
+- **Submitted version:** release `v1.2`, tagged in this repository (the version the report links to).
 
 ## Project status
 
