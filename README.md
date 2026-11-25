@@ -1,6 +1,6 @@
 # VerifyFirst
 
-**README prose word count: about 1158** (code, commands, file trees and the diagram are not counted)
+**README prose word count: about 1172** (code, commands, file trees and the diagram are not counted)
 
 VerifyFirst is a research prototype: a simulated university inbox that tests whether an AI warning that names one checkable detail leads students to verify account-suspension emails independently, compared with a generic warning. It builds on my Assignment 1 literature review.
 
@@ -21,7 +21,7 @@ VerifyFirst is a research prototype: a simulated university inbox that tests whe
 | Student portal (the independent check) | **Simulated** |
 | Link destinations | **Simulated**: no page loads and nothing typed is collected |
 | Event log, outcome measures, JSON/CSV export | Implemented, unit-tested |
-| Study with participants | **Planned**, not yet run |
+| Study with participants | Pilot with three classmates **done** (see Development record); full comparative study **planned** |
 | Real classifier, mail-client add-in, randomised email order | **Planned** |
 
 The university, its domain (`northvale.ac.uk`) and every email are fictional, so the prototype never imitates a real institution.
