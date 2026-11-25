@@ -1,0 +1,13 @@
+{
+  "name": "verifyfirst",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulated inbox study of AI warnings for account-suspension phishing emails",
+  "scripts": {
+    "test": "node --test && python3 -m unittest discover tests",
+    "walkthrough": "node scripts/capture_screenshots.cjs && node scripts/make_storyboards.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}
