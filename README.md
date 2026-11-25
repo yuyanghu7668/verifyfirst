@@ -1,6 +1,6 @@
 # VerifyFirst
 
-**README prose word count: about 1133** (code, commands, file trees and the diagram are not counted)
+**README prose word count: about 1158** (code, commands, file trees and the diagram are not counted)
 
 VerifyFirst is a research prototype: a simulated university inbox that tests whether an AI warning that names one checkable detail leads students to verify account-suspension emails independently, compared with a generic warning. It builds on my Assignment 1 literature review.
 
@@ -139,7 +139,7 @@ The commit history shows the order of the work. These are the significant decisi
 ## AI assistance
 
 - **Tool:** Claude (Anthropic).
-- **What I used it for:** turning my Assignment 1 design into prototype code, drafting the scenario emails and explanation text, writing the tests and scripts, and drafting this README and parts of the report.
+- **What I used it for:** supporting design work and generating ideas, writing the prototype code from my design, and debugging. I directed the revisions to the code, for example the changes after the pilot. It also assisted with drafting the scenario emails and explanation text, writing the tests and scripts, and drafting this README and parts of the report.
 - **What I did and checked myself:** I set the research question and study design in Assignment 1. I ran the pilot with three classmates, recorded their behaviour and feedback, and decided which changes to make: the generic warning was kept as the control condition. I wrote the pilot summary in this README and checked that the repository, release and report links work.
 
 ## Additional files
