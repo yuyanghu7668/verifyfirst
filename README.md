@@ -1,6 +1,6 @@
 # VerifyFirst
 
-**README prose word count: about 1172** (code, commands, file trees and the diagram are not counted)
+**README prose word count: about 1224** (code, commands, file trees and the diagram are not counted)
 
 VerifyFirst is a research prototype: a simulated university inbox that tests whether an AI warning that names one checkable detail leads students to verify account-suspension emails independently, compared with a generic warning. It builds on my Assignment 1 literature review.
 
@@ -134,6 +134,7 @@ The commit history shows the order of the work. These are the significant decisi
 | Fault 2: results panel | Storyboard 3 showed "False alarm handled: No" for a session that never opened that email. Unopened emails now count as "not opened", and a test covers it. |
 | Test status | The submitted version passes 18 automated tests (13 JavaScript, 5 Python) and the end-to-end walkthrough. The output is in `docs/test-results.md`. |
 | Pilot | Reviewed warning clarity, evidence presentation, phishing recognition, independent verification, and false-positive communication. Identified areas for improvement in explanation clarity and warning wording. |
+| Pilot results | Three classmates took part: one in condition A (P01) and two in condition B (P02, P03). No phishing link was followed and the portal was checked twice. Two participants identified the genuine MFA notice (G2) correctly; one reported it as phishing. P02 and P03 found the first explanations too long. |
 | Changes after the pilot | Explanations shortened. The "Verify it yourself" step moved directly under the evidence and made more prominent ("Check in the student portal"). Warnings relabelled "AI risk warning · not a verdict", with confidence described as a risk estimate. The generic warning is unchanged because it is the control condition. All 18 tests and the walkthrough pass after the changes (`docs/test-results.md`). |
 
 ## AI assistance
