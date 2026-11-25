@@ -1,0 +1,48 @@
+flowchart LR
+  U((Student))
+  subgraph APP["Browser app (app/) — runs offline"]
+    direction LR
+    I["Inbox UI<br/><b>implemented</b>"]
+    D[("Scenario data<br/>8 emails, 6 scored<br/><b>implemented</b>")]
+    C{{"Classifier flag<br/><b>simulated</b>: scripted,<br/>1 false alarm, 1 miss"}}
+    E["Evidence extractor<br/>link + sender domain,<br/>urgency, sign-in phrases<br/><b>implemented</b>"]
+    X[("Cached explanations<br/>LLM-generated, checked,<br/>frozen <b>implemented</b>")]
+    W["Warning at link click<br/>A: generic<br/>B: detail + explanation<br/>+ confidence + portal<br/><b>implemented</b>"]
+    P["Student portal<br/>independent check<br/><b>simulated</b>"]
+    S["Link destination<br/>nothing loads<br/><b>simulated</b>"]
+    LG["Event logger + metrics<br/>JSON / CSV export<br/><b>implemented</b>"]
+  end
+  subgraph SRV["server/server.py — optional"]
+    API["/api/explain<br/>key stays server-side<br/><b>implemented</b>"]
+    LLM[("LLM API<br/><b>tested with mock only</b>")]
+  end
+  subgraph PLAN["Planned"]
+    RC["Real phishing classifier"]
+    MC["Mail-client add-in"]
+    ST["Participant study"]
+  end
+  U -->|reads, hovers, clicks| I
+  D --> I
+  D --> C
+  D --> E
+  I -->|link click| C
+  C -->|flagged| W
+  C -->|not flagged| S
+  E -->|checkable detail| W
+  X -->|cached text| W
+  E -.->|evidence| API
+  API -.-> LLM
+  API -.->|live text| W
+  W -->|Open the portal| P
+  I -->|top-bar bookmark| P
+  W -->|Open anyway| S
+  I --> LG
+  W --> LG
+  P --> LG
+  RC -.->|would replace| C
+  classDef sim fill:#fff4e5,stroke:#9a4a00
+  classDef impl fill:#e8eefb,stroke:#2451b8
+  classDef plan fill:#f4f5f7,stroke:#8a9099,stroke-dasharray:4 3
+  class C,P,S sim
+  class I,D,E,X,W,LG,API impl
+  class RC,MC,ST plan
