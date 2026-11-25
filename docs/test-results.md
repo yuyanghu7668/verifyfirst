@@ -1,6 +1,6 @@
 # Test results
 
-Recorded from real runs of the submitted version on 25 November 2026 (UTC). Regenerate with `scripts/record_test_results.sh`.
+Recorded from real runs on 25 November 2026 (UTC). Regenerate with `scripts/record_test_results.sh`.
 
 ## JavaScript unit tests (`node --test`)
 
@@ -40,5 +40,3 @@ OK
 ```text
 Walkthrough passed. Screenshots in docs/screens
 ```
-
-The walkthrough drives both conditions in a real browser and asserts the logged outcomes: the correct flag is verified in the portal and reported, the false alarm is overruled and kept, the missed phishing email is caught via the status bar, no unsafe link is followed in condition B, and following the link in condition A is recorded as one unsafe choice.

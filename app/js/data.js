@@ -144,23 +144,24 @@
    * Generated with an LLM from the evidence produced by extractor.js, then reviewed,
    * frozen and checked against the success criteria in criteria.js (see the unit tests),
    * so every participant reads identical text (experimental control).
+   * Shortened after the pilot (P02, P03 found the first version too long).
    * Live generation is available through server/server.py (see README).
    */
   const EXPLANATIONS = {
     P1: {
-      headline: 'This email may be trying to get your password',
-      summary: 'The button links to northvale-support.com. Northvale University websites end in northvale.ac.uk, so this link does not go to the university.',
-      action: 'Don’t use the link. Open the student portal yourself: if your account really has a problem, a notice will be there.'
+      headline: 'This link does not go to the university',
+      summary: 'The link goes to northvale-support.com, not to a northvale.ac.uk address.',
+      action: 'Don\u2019t use the link. Check the student portal yourself.'
     },
     P2: {
       headline: 'This link hides its real address',
-      summary: 'The address starts with “northvale.ac.uk” but really goes to mailbox-restore.net. Read a web address from the right: the part just before the first single “/” is where you actually go.',
-      action: 'Don’t use the link. Open the student portal yourself and check your mailbox status there.'
+      summary: 'The address starts with \u201cnorthvale.ac.uk\u201d but really goes to mailbox-restore.net.',
+      action: 'Don\u2019t use the link. Check your mailbox in the student portal yourself.'
     },
     G2: {
       headline: 'Check this one before you act',
-      summary: 'It was flagged because it sets a deadline and asks you to sign in. But the link goes to portal.northvale.ac.uk, which is a university address, so this may be a false alarm.',
-      action: 'Open the student portal yourself to see whether this notice is listed there.'
+      summary: 'Flagged for its deadline and sign-in request, but the link goes to portal.northvale.ac.uk, a university address. This may be a false alarm.',
+      action: 'Check the student portal yourself to see whether this notice is listed.'
     }
   };
 

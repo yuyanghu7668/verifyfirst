@@ -1,6 +1,6 @@
 # VerifyFirst
 
-**README prose word count: about 972** (code, commands, file trees and the diagram are not counted)
+**README prose word count: about 1093** (code, commands, file trees and the diagram are not counted)
 
 VerifyFirst is a research prototype: a simulated university inbox that tests whether an AI warning that names one checkable detail leads students to verify account-suspension emails independently, compared with a generic warning. It builds on my Assignment 1 literature review.
 
@@ -133,7 +133,8 @@ The commit history shows the order of the work. These are the significant decisi
 | Fault 1: explanation vs evidence | A unit test found that the cached G2 explanation said the email asked the student to sign in, but the extractor found no sign-in request in the email. I revised the email text so the scenario, evidence and explanation agree. |
 | Fault 2: results panel | Storyboard 3 showed "False alarm handled: No" for a session that never opened that email. Unopened emails now count as "not opened", and a test covers it. |
 | Test status | The submitted version passes 18 automated tests (13 JavaScript, 5 Python) and the end-to-end walkthrough. The output is in `docs/test-results.md`. |
-| Pilot | TODO: run the study with 2 or 3 people, then record what they did and what I changed. |
+| Pilot (3 classmates: P01 in A, P02 and P03 in B) | No phishing link was clicked, 2 participants checked the portal, 2 handled the MFA false alarm correctly and 1 reported it as phishing. P01 (A) noticed the risk but not why. P02 used the portal to check the MFA email instead of accepting the warning. P02 and P03 found the explanations long, and P03 asked for a clearer line between a risk warning and a definite judgement. |
+| Changes after the pilot | Explanations shortened. The "Verify it yourself" step moved directly under the evidence and made more prominent ("Check in the student portal"). Warnings relabelled "AI risk warning · not a verdict", with confidence described as a risk estimate. The generic warning is unchanged because it is the control condition. All 18 tests and the walkthrough pass after the changes (`docs/test-results.md`). |
 
 ## AI assistance
 

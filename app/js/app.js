@@ -358,20 +358,20 @@
         <div class="w-head">
           <div class="w-icon" aria-hidden="true">!</div>
           <div>
-            <p class="eyebrow">AI safety check</p>
+            <p class="eyebrow">AI risk warning \u00b7 not a verdict</p>
             <h2 id="w-title">${esc(exp.headline)}</h2>
           </div>
         </div>
         ${checkableHtml(ev.checkable)}
+        <p class="w-action"><strong>Verify it yourself:</strong> ${esc(exp.action)}</p>
         <p id="w-sum">${esc(exp.summary)}</p>
-        <p class="w-action"><strong>What to do:</strong> ${esc(exp.action)}</p>
         <details id="w-why">
           <summary>Why was this flagged?</summary>
           <ul>${evidenceList(ev)}</ul>
         </details>
-        <p class="confidence">AI confidence: <strong>${conf === 'high' ? 'High' : 'Medium'}</strong>. This tool can be wrong; the portal is the reliable check.</p>
+        <p class="confidence">AI confidence: <strong>${conf === 'high' ? 'High' : 'Medium'}</strong>. This is a risk estimate, not a verdict; the portal is the reliable check.</p>
         <div class="modal-actions">
-          <button class="btn primary" id="w-portal">Open the student portal</button>
+          <button class="btn primary" id="w-portal">Check in the student portal</button>
           <button class="btn" id="w-back">Back to the email</button>
           <button class="btn link" id="w-continue">Open the link anyway</button>
         </div>
